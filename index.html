@@ -279,10 +279,26 @@ footer .links{display:flex;gap:18px}
 <script>
 // Paste the video links here (YouTube "Unlisted" or Google Drive "Anyone with the link")
 const VIDEO_LINKS = { tiktok: "", parent: "" };
+function embedUrl(u){
+  let m;
+  if ((m = u.match(/(?:youtu\.be\/|v=|shorts\/|embed\/)([\w-]{11})/))) return "https://www.youtube.com/embed/" + m[1];
+  if ((m = u.match(/drive\.google\.com\/file\/d\/([\w-]+)/))) return "https://drive.google.com/file/d/" + m[1] + "/preview";
+  return null;
+}
 for (const [k, id] of [["tiktok","v-tiktok"],["parent","v-parent"]]) {
-  const a = document.getElementById(id);
-  if (VIDEO_LINKS[k]) { a.href = VIDEO_LINKS[k]; }
-  else { a.textContent = "Video coming soon"; a.classList.add("disabled"); a.removeAttribute("target"); }
+  const a = document.getElementById(id), url = VIDEO_LINKS[k].trim();
+  if (!url) { a.textContent = "Video coming soon"; a.classList.add("disabled"); a.removeAttribute("target"); continue; }
+  a.href = url;
+  const e = embedUrl(url), thumb = a.closest(".video").querySelector(".thumb");
+  if (e) {
+    const f = document.createElement("iframe");
+    f.src = e; f.title = a.closest(".video").querySelector("h3").textContent;
+    f.allow = "accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture";
+    f.allowFullscreen = true; f.loading = "lazy";
+    f.style.cssText = "border:0;width:100%;aspect-ratio:16/9;display:block;background:#000";
+    thumb.replaceWith(f);
+    a.textContent = "Open in new tab";
+  }
 }
 document.getElementById("regform").addEventListener("submit", e => {
   e.preventDefault();
