@@ -1,0 +1,294 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Mahidol ICT – Study ICT near home | For students from Myanmar</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:wght@700;800&family=Noto+Sans:wght@400;600;700&family=Noto+Sans+Myanmar:wght@400;600&display=swap">
+<style>
+:root{--navy:#14306b;--navy2:#0e2552;--gold:#e5a11c;--ink:#1c2433;--muted:#5b6475;--bg:#f3f5f9;--line:#dde3ee}
+*{box-sizing:border-box;margin:0;padding:0}
+body{font-family:'Noto Sans','Noto Sans Myanmar',sans-serif;color:var(--ink);background:var(--bg);font-size:16px;line-height:1.55;-webkit-print-color-adjust:exact;print-color-adjust:exact}
+h1,h2,h3,.num{font-family:'Bricolage Grotesque','Noto Sans',sans-serif}
+.wrap{width:1120px;margin:0 auto}
+a{color:inherit;text-decoration:none}
+.btn{display:inline-block;font-weight:600;font-size:15px;padding:13px 24px;border-radius:999px}
+.btn-gold{background:var(--gold);color:#14213d}
+.btn-ghost{border:1.5px solid rgba(255,255,255,.7);color:#fff}
+header.hero{background:var(--navy);color:#fff;padding:22px 0 110px}
+.top{display:flex;justify-content:space-between;align-items:center;margin-bottom:56px}
+.brand b{display:block;font-size:17px}.brand span{font-size:13px;opacity:.8}
+.top .btn{padding:9px 18px;font-size:14px}
+.hero-grid{display:grid;grid-template-columns:1.05fr .95fr;gap:56px;align-items:center}
+.hello{color:var(--gold);font-size:15px;margin-bottom:14px;font-weight:600}
+.hello .mm{font-family:'Noto Sans Myanmar';font-weight:600}
+h1{font-size:60px;line-height:1.02;font-weight:800;letter-spacing:-.5px;margin-bottom:20px}
+.lead{font-size:18px;opacity:.9;max-width:520px;margin-bottom:30px}
+.ctas{display:flex;gap:14px}
+.visual{background:#fff;border-radius:22px;overflow:hidden;box-shadow:0 20px 50px rgba(0,0,0,.25)}
+.visual > svg{display:block;width:100%;height:auto}
+.plane{flex:none;width:20px;height:20px}
+.route{padding:16px 22px 18px;color:var(--ink)}
+.route-line{display:flex;align-items:center;gap:12px;font-weight:700;font-size:15px}
+.route-line small{display:block;font-weight:400;color:var(--muted);font-size:12px}
+.route-line .dash{flex:1;border-top:2px dashed #b8c2d6;position:relative}
+.dot{width:12px;height:12px;border-radius:50%;flex:none}
+.route p{font-size:13px;color:var(--muted);margin-top:8px}
+.stats{margin-top:-62px;background:#fff;border-radius:18px;box-shadow:0 10px 30px rgba(20,48,107,.12);display:grid;grid-template-columns:repeat(4,1fr);padding:28px 30px;gap:24px}
+.num{font-size:34px;font-weight:800;color:var(--navy);line-height:1.1}
+.stats p{font-size:13.5px;color:var(--muted);margin-top:6px}
+section{padding:72px 0 0}
+h2{font-size:38px;font-weight:800;color:var(--navy);line-height:1.12;margin-bottom:10px}
+.sub{color:var(--muted);font-size:17px;max-width:620px}
+.cards{display:grid;grid-template-columns:repeat(3,1fr);gap:26px;margin-top:36px}
+.card{background:#fff;border-radius:16px;padding:26px;border:1px solid var(--line)}
+.ic{width:44px;height:44px;border-radius:12px;background:#fdf3dc;display:grid;place-items:center;margin-bottom:16px}
+.card h3{font-size:20px;font-weight:700;color:var(--ink);margin-bottom:8px;line-height:1.2}
+.card p{font-size:15px;color:var(--muted)}
+.careers{background:#fff;border-radius:20px;padding:36px;display:grid;grid-template-columns:1fr 1.15fr;gap:36px;align-items:center;border:1px solid var(--line)}
+.logos{display:grid;grid-template-columns:repeat(3,1fr);gap:12px}
+.logo{border:1px solid var(--line);border-radius:12px;padding:16px 10px;text-align:center}
+.logo b{display:block;font-size:17px;color:var(--navy)}
+.logo span{font-size:11.5px;color:var(--muted)}
+.note{font-size:12px;color:var(--muted);margin-top:10px}
+.usp{margin-top:34px;background:#fff;border-left:6px solid var(--gold);border-radius:14px;padding:22px 28px;font-family:'Bricolage Grotesque',sans-serif;font-size:26px;font-weight:800;color:var(--navy);line-height:1.25}
+.usp small{display:block;font-family:'Noto Sans',sans-serif;font-size:13px;letter-spacing:1px;color:#c98a0c;margin-bottom:6px}
+.deadline{margin-top:34px;background:#fff;border:2px solid var(--gold);border-radius:18px;padding:24px 30px;display:grid;grid-template-columns:auto 1fr;gap:28px;align-items:center}
+.deadline .date{background:var(--navy);color:#fff;border-radius:14px;padding:16px 22px;text-align:center}
+.deadline .date small{display:block;font-size:12px;letter-spacing:1px;color:#ffd27a;font-weight:700}
+.deadline .date b{display:block;font-family:'Bricolage Grotesque';font-size:30px;line-height:1.1}
+.deadline h3{font-size:20px;color:var(--navy);margin-bottom:4px}
+.deadline p{font-size:15px;color:var(--muted)}
+.steps{display:grid;grid-template-columns:repeat(3,1fr);gap:26px;margin-top:30px}
+.step{border-top:3px solid var(--line);padding-top:16px}
+.step:first-child{border-color:var(--gold)}
+.step .n{font-family:'Bricolage Grotesque';font-weight:800;font-size:22px;color:var(--navy)}
+.step h3{font-size:17px;margin:6px 0;font-family:'Noto Sans';font-weight:700}
+.step p{font-size:14.5px;color:var(--muted)}
+.cta{background:var(--navy);color:#fff;margin-top:76px;padding:60px 0}
+.cta-grid{display:grid;grid-template-columns:1fr 440px;gap:56px;align-items:center}
+.cta h2{color:#fff}
+.cta .when{display:inline-block;background:rgba(229,161,28,.18);color:#ffd27a;border-radius:10px;padding:8px 14px;font-weight:600;margin:10px 0 14px}
+.cta p{opacity:.9}
+.form{background:#fff;color:var(--ink);border-radius:18px;padding:26px}
+.form label{display:block;font-size:13px;font-weight:700;margin:4px 0 6px}
+.field{height:42px;border:1.5px solid #c9d1df;border-radius:10px;margin-bottom:14px}
+.form .btn{display:block;text-align:center;width:100%;margin-top:4px;border-radius:12px}
+.form small{display:block;font-size:12px;color:var(--muted);margin-top:10px}
+footer{background:var(--navy2);color:#cfd6e6;font-size:13px;padding:18px 0}
+footer .wrap{display:flex;justify-content:space-between}
+footer a{text-decoration:underline;color:#fff}
+
+html{scroll-behavior:smooth}
+.disclaimer{background:#0e2552;color:#cfd6e6;font-size:12.5px;text-align:center;padding:7px 12px}
+.btn{cursor:pointer;transition:transform .15s,box-shadow .15s}.btn:hover{transform:translateY(-1px);box-shadow:0 6px 16px rgba(0,0,0,.18)}
+.btn-navy{background:var(--navy);color:#fff}
+.step a{display:inline-block;margin-top:10px;font-weight:700;color:var(--navy);text-decoration:underline}
+.videos{display:grid;grid-template-columns:1fr 1fr;gap:26px;margin-top:30px}
+.video{background:#fff;border:1px solid var(--line);border-radius:16px;overflow:hidden;display:flex;flex-direction:column}
+.thumb{background:var(--navy);color:#fff;aspect-ratio:16/8;display:flex;align-items:center;justify-content:center;flex-direction:column;gap:10px}
+.thumb .play{width:64px;height:64px;border-radius:50%;background:var(--gold);display:grid;place-items:center}
+.video .body{padding:22px;display:flex;flex-direction:column;gap:8px;flex:1}
+.video h3{font-size:20px;color:var(--ink)}.video p{font-size:15px;color:var(--muted);flex:1}
+.video .btn{align-self:flex-start;margin-top:6px}
+.btn.disabled{background:#e6eaf2;color:#7a8396;pointer-events:none}
+.form input,.form select{width:100%;height:44px;border:1.5px solid #c9d1df;border-radius:10px;margin-bottom:14px;padding:0 12px;font:inherit;font-size:15px;color:var(--ink);background:#fff}
+.form input:focus,.form select:focus{outline:2px solid var(--gold);border-color:var(--gold)}
+.form button{border:0;width:100%;font:inherit;font-weight:700;font-size:15px}
+.thanks{display:none;background:#eaf6ee;border:1.5px solid #8cc9a0;color:#1d5b33;border-radius:12px;padding:14px;font-size:14.5px;margin-top:12px}
+footer .links{display:flex;gap:18px}
+@media (max-width:900px){.wrap{width:auto;padding:0 20px}.hero-grid,.cta-grid,.careers,.videos{grid-template-columns:1fr}.stats{grid-template-columns:1fr 1fr}.cards,.steps{grid-template-columns:1fr}.logos{grid-template-columns:repeat(2,1fr)}h1{font-size:40px}h2{font-size:30px}.ctas{flex-wrap:wrap}.usp{margin-top:34px;background:#fff;border-left:6px solid var(--gold);border-radius:14px;padding:22px 28px;font-family:'Bricolage Grotesque',sans-serif;font-size:26px;font-weight:800;color:var(--navy);line-height:1.25}
+.usp small{display:block;font-family:'Noto Sans',sans-serif;font-size:13px;letter-spacing:1px;color:#c98a0c;margin-bottom:6px}
+.deadline{grid-template-columns:1fr}footer .wrap{flex-direction:column;gap:8px}.top{flex-wrap:wrap;gap:12px}}
+</style>
+</head>
+<body>
+<div class="disclaimer">Student project for a Business Communication course (Product Communication Campaign) – not an official Mahidol University website.</div>
+<header class="hero">
+ <div class="wrap">
+  <div class="top">
+   <div class="brand"><b>Mahidol University</b><span>Faculty of Information and Communication Technology</span></div>
+   <a class="btn btn-gold" href="#register">Join the info session</a>
+  </div>
+  <div class="hero-grid">
+   <div>
+    <div class="hello"><span class="mm">မင်္ဂလာပါ</span> – Mingalaba, future ICT student.</div>
+    <h1>A world-ranked ICT degree, one short flight from home.</h1>
+    <p class="lead">Study Mahidol's English-taught B.Sc. in ICT (no Thai language needed) on our Salaya campus, near Bangkok – close to your family, with a cost you can plan for from day one.</p>
+    <div class="ctas"><a class="btn btn-gold" href="#register">Register for the online info session</a><a class="btn btn-ghost" href="#videos">Watch our videos</a></div>
+   </div>
+   <div class="visual">
+    <svg viewBox="0 0 520 300" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Illustration of an ICT student's laptop on the Salaya campus">
+     <defs>
+      <linearGradient id="sky" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#dfe9fb"/><stop offset="1" stop-color="#f6f8fc"/></linearGradient>
+     </defs>
+     <rect width="520" height="300" fill="url(#sky)"/>
+     <circle cx="430" cy="62" r="26" fill="#f7cf73"/>
+     <!-- campus buildings -->
+     <g fill="#c7d4ee"><rect x="20" y="120" width="120" height="110" rx="4"/><rect x="150" y="90" width="90" height="140" rx="4"/><rect x="380" y="110" width="120" height="120" rx="4"/></g>
+     <g fill="#aebfe3">
+      <rect x="34" y="136" width="18" height="14"/><rect x="62" y="136" width="18" height="14"/><rect x="90" y="136" width="18" height="14"/>
+      <rect x="34" y="162" width="18" height="14"/><rect x="62" y="162" width="18" height="14"/><rect x="90" y="162" width="18" height="14"/>
+      <rect x="164" y="106" width="16" height="14"/><rect x="190" y="106" width="16" height="14"/><rect x="216" y="106" width="16" height="14"/>
+      <rect x="164" y="132" width="16" height="14"/><rect x="190" y="132" width="16" height="14"/><rect x="216" y="132" width="16" height="14"/>
+      <rect x="396" y="126" width="18" height="14"/><rect x="424" y="126" width="18" height="14"/><rect x="452" y="126" width="18" height="14"/>
+      <rect x="396" y="152" width="18" height="14"/><rect x="424" y="152" width="18" height="14"/><rect x="452" y="152" width="18" height="14"/>
+     </g>
+     <!-- trees -->
+     <g fill="#7fb38a"><circle cx="262" cy="196" r="22"/><circle cx="350" cy="192" r="26"/><circle cx="12" cy="206" r="18"/><circle cx="506" cy="206" r="18"/></g>
+     <g fill="#6a8f73"><rect x="259" y="210" width="6" height="22"/><rect x="347" y="210" width="6" height="22"/></g>
+     <rect y="228" width="520" height="72" fill="#e6ecf6"/>
+     <!-- laptop -->
+     <g transform="translate(150 92)">
+      <rect x="0" y="0" width="220" height="136" rx="10" fill="#14306b"/>
+      <rect x="10" y="10" width="200" height="116" rx="4" fill="#0f1b33"/>
+      <circle cx="22" cy="20" r="3" fill="#ff6b6b"/><circle cx="32" cy="20" r="3" fill="#ffd166"/><circle cx="42" cy="20" r="3" fill="#06d6a0"/>
+      <g font-family="monospace" font-size="10.5">
+       <text x="20" y="44" fill="#7aa2ff">def</text><text x="44" y="44" fill="#ffd27a">future</text><text x="84" y="44" fill="#cfd6e6">(you):</text>
+       <text x="32" y="62" fill="#cfd6e6">skills = [</text><text x="92" y="62" fill="#9be7b0">"AI"</text><text x="118" y="62" fill="#cfd6e6">,</text>
+       <text x="44" y="78" fill="#9be7b0">"Data"</text><text x="80" y="78" fill="#cfd6e6">,</text><text x="88" y="78" fill="#9be7b0">"Security"</text><text x="146" y="78" fill="#cfd6e6">]</text>
+       <text x="32" y="96" fill="#7aa2ff">return</text><text x="72" y="96" fill="#ffd27a">"career"</text>
+      </g>
+      <rect x="20" y="106" width="70" height="6" rx="3" fill="#e5a11c"/>
+      <path d="M-22 136 H242 L228 152 H-8 Z" fill="#c2cce0"/>
+     </g>
+     <!-- chips -->
+     <g font-family="Body, sans-serif" font-size="12" font-weight="700">
+      <rect x="40" y="246" width="118" height="30" rx="15" fill="#fff" stroke="#d3dbea"/><text x="99" y="266" text-anchor="middle" fill="#14306b">English-taught</text>
+      <rect x="200" y="262" width="120" height="30" rx="15" fill="#fff" stroke="#d3dbea"/><text x="260" y="282" text-anchor="middle" fill="#14306b">8 specialisations</text>
+      <rect x="362" y="246" width="118" height="30" rx="15" fill="#fff" stroke="#d3dbea"/><text x="421" y="266" text-anchor="middle" fill="#14306b">Project-based</text>
+     </g>
+    </svg>
+    <div class="route">
+     <div class="route-line">
+      <span class="dot" style="background:var(--gold)"></span><div>Yangon<small>Home</small></div>
+      <div class="dash"></div>
+      <svg class="plane" viewBox="0 0 24 24" fill="#14306b"><path d="M21 16v-2l-8-5V3.5a1.5 1.5 0 0 0-3 0V9l-8 5v2l8-2.5V19l-2 1.5V22l3.5-1 3.5 1v-1.5L13 19v-5.5z"/></svg>
+      <div class="dash"></div>
+      <div style="text-align:right">Salaya<small>Mahidol ICT</small></div><span class="dot" style="background:var(--navy)"></span>
+     </div>
+     <p>Around 90 minutes by air to Bangkok – close enough for family visits and holidays at home.</p>
+    </div>
+   </div>
+  </div>
+ </div>
+</header>
+
+<div class="wrap">
+ <div class="stats">
+  <div><div class="num">#345</div><p>Mahidol University in the QS World University Rankings 2027 – one of Thailand's top universities</p></div>
+  <div><div class="num">100%</div><p>Taught in English, at an internationally recognised university</p></div>
+  <div><div class="num">8</div><p>Specialisation tracks, so you can shape the degree around your goals</p></div>
+  <div><div class="num">≈180,000</div><p>Baht tuition per year for international students*</p></div>
+ </div>
+ <div class="usp"><small>OUR PROMISE TO MYANMAR FAMILIES</small>A world-ranked Mahidol ICT degree, in English, right next door – at a price your family can plan for.</div>
+
+
+ <section>
+  <h2>What you gain at Mahidol ICT</h2>
+  <p class="sub">Quality, cost and closeness to home – the three things Myanmar students and families ask us about most.</p>
+  <div class="cards">
+   <div class="card">
+    <div class="ic"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="#c98a0c" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 10 12 5 2 10l10 5 10-5z"/><path d="M6 12v5c3 2 9 2 12 0v-5"/></svg></div>
+    <h3>Finish what you started</h3>
+    <p>If your studies were interrupted, this is a stable four-year path to the qualification you were already working towards – at one of Thailand's leading universities.</p>
+   </div>
+   <div class="card">
+    <div class="ic"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="#c98a0c" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="4" width="18" height="18" rx="2"/><path d="M16 2v4M8 2v4M3 10h18"/></svg></div>
+    <h3>A cost your family can plan for</h3>
+    <p>Clear yearly tuition of about 180,000 baht and lower living costs than many study destinations, so your family can budget all four years before you start.</p>
+   </div>
+   <div class="card">
+    <div class="ic"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="#c98a0c" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M3 10.5 12 3l9 7.5V21H3z"/><path d="M9 21v-6h6v6"/></svg></div>
+    <h3>Feel at home from week one</h3>
+    <p>Thailand and Myanmar are neighbours with similar cultures, familiar food and shared Buddhist traditions. You'll join a growing community of Myanmar students studying in Thailand.</p>
+   </div>
+  </div>
+ </section>
+
+ <section>
+  <div class="careers">
+   <div>
+    <h2>Our graduates build careers at leading global companies</h2>
+    <p class="sub">International graduates of Mahidol ICT have gone on to work at well-known technology and consulting firms. Your internationally recognised degree also travels home with you – for an ICT career in Myanmar or anywhere in ASEAN.</p>
+   </div>
+   <div>
+    <div class="logos">
+     <div class="logo"><b>Agoda</b><span>Graduate employer</span></div>
+     <div class="logo"><b>IBM</b><span>Graduate employer</span></div>
+     <div class="logo"><b>Accenture</b><span>Graduate employer</span></div>
+     <div class="logo"><b>Deloitte</b><span>Graduate employer</span></div>
+     <div class="logo"><b>KPMG</b><span>Graduate employer</span></div>
+     <div class="logo"><b>LINE</b><span>Graduate employer</span></div>
+    </div>
+   </div>
+  </div>
+ </section>
+
+ <section id="videos">
+  <h2>See Mahidol ICT for yourself</h2>
+  <p class="sub">Two short films about studying ICT at Mahidol – one for students, one for parents.</p>
+  <div class="videos">
+   <div class="video">
+    <div class="thumb"><span class="play"><svg width="26" height="26" viewBox="0 0 24 24" fill="#14213d" aria-hidden="true"><path d="M8 5v14l11-7z"/></svg></span><b>For students · 30 seconds</b></div>
+    <div class="body"><h3>Your ICT future, close to home</h3><p>A quick look at our faculty, labs and student life.</p><a class="btn btn-gold" id="v-tiktok" target="_blank" rel="noopener">Watch the video</a></div>
+   </div>
+   <div class="video">
+    <div class="thumb"><span class="play"><svg width="26" height="26" viewBox="0 0 24 24" fill="#14213d" aria-hidden="true"><path d="M8 5v14l11-7z"/></svg></span><b>For parents · 2–3 minutes</b></div>
+    <div class="body"><h3>A future your family can plan for</h3><p>Quality, costs, support and how to apply – answers to parents' questions.</p><a class="btn btn-gold" id="v-parent" target="_blank" rel="noopener">Watch the video</a></div>
+   </div>
+  </div>
+ </section>
+
+ <section id="steps">
+  <h2>Three steps to your place</h2>
+  <div class="steps">
+   <div class="step"><div class="n">1</div><h3>Join the online info session</h3><p>Hear from our admissions team and ask about visas, housing and costs.</p><a href="#register">Register now →</a></div>
+   <div class="step"><div class="n">2</div><h3>Check the admission requirements</h3><p>See the English test scores and documents you need for 2027 entry.</p><a href="https://www.ict.mahidol.ac.th/en/ict-international-direct-admissions-academic-year-2027/" target="_blank" rel="noopener">View requirements →</a></div>
+   <div class="step"><div class="n">3</div><h3>Apply online by 31 December 2026</h3><p>Submit your application from Myanmar – no need to travel until you're accepted.</p><a href="https://admission.ict.mahidol.ac.th/apply/" target="_blank" rel="noopener">Apply online →</a></div>
+  </div>
+  <div class="deadline">
+   <div class="date"><small>APPLY BY</small><b>31 Dec 2026</b><small>ROUND 2</small></div>
+   <div><h3>Application deadline: 31 December 2026 · Scholarships available</h3><p>Complete your online application by 31 December 2026 (International Direct Admissions, Round 2) to interview in February 2027. The Faculty offers scholarships for academic and activity excellence – ask about eligibility at the info session.</p><p style="margin-top:12px"><a class="btn btn-navy" href="https://admission.ict.mahidol.ac.th/apply/" target="_blank" rel="noopener">Start your application</a></p></div>
+  </div>
+ </section>
+</div>
+
+<div class="cta" id="register">
+ <div class="wrap cta-grid">
+  <div>
+   <h2>Take the first step: join our free online info session</h2>
+   <div class="when">Saturday, 12 December 2026 · 3:00 PM Myanmar time · Zoom</div>
+   <p>One hour, in English, with time for your questions. Bring your parents – they're welcome too.</p>
+  </div>
+  <form class="form" id="regform">
+   <label for="f-name">Full name</label><input id="f-name" name="name" required autocomplete="name">
+   <label for="f-email">Email</label><input id="f-email" name="email" type="email" required autocomplete="email">
+   <label for="f-role">I am a…</label><select id="f-role" name="role"><option>Prospective student</option><option>Parent or guardian</option></select>
+   <button class="btn btn-gold" type="submit">Register for the info session</button>
+   <small>We'll email you the Zoom link and a free short guide to studying in Thailand.</small>
+   <div class="thanks" id="thanks" role="status">Thank you! Your registration is noted. (Demo only – this student project page does not send or store your details.)</div>
+  </form>
+ </div>
+</div>
+
+<footer>
+ <div class="wrap"><span>Faculty of ICT, Mahidol University, Salaya, Nakhon Pathom, Thailand · *Fee as published by the Faculty; please check the latest rate at ict.mahidol.ac.th</span><span class="links"><a href="https://www.ict.mahidol.ac.th/en/ict-international-direct-admissions-academic-year-2027/" target="_blank" rel="noopener">Admission requirements</a><a href="https://admission.ict.mahidol.ac.th/apply/" target="_blank" rel="noopener">Apply online</a><a href="#videos">Videos</a></span></div>
+</footer>
+<script>
+// Paste the video links here (YouTube "Unlisted" or Google Drive "Anyone with the link")
+const VIDEO_LINKS = { tiktok: "", parent: "" };
+for (const [k, id] of [["tiktok","v-tiktok"],["parent","v-parent"]]) {
+  const a = document.getElementById(id);
+  if (VIDEO_LINKS[k]) { a.href = VIDEO_LINKS[k]; }
+  else { a.textContent = "Video coming soon"; a.classList.add("disabled"); a.removeAttribute("target"); }
+}
+document.getElementById("regform").addEventListener("submit", e => {
+  e.preventDefault();
+  document.getElementById("thanks").style.display = "block";
+  e.target.querySelector("button").textContent = "Registered ✓";
+});
+</script>
+</body>
+</html>
